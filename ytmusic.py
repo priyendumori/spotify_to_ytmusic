@@ -145,4 +145,23 @@ def copyPlayliststoYTMusic():
             print(res)
             print("-----------------------------------------------------")
 
+
+print("Calling searchAndLikeSongsOnYTMusic()")
+searchAndLikeSongsOnYTMusic()
+print("Finished searchAndLikeSongsOnYTMusic()")
+print("------------------")
+
+print("Calling searchAndLikeAlbumsOnYTMusic()")
+searchAndLikeAlbumsOnYTMusic()
+print("Finished searchAndLikeAlbumsOnYTMusic()")
+print("------------------")
+
+print("Calling searchAndLikeArtistsOnYTMusic()")
+searchAndLikeArtistsOnYTMusic()
+print("Finished searchAndLikeArtistsOnYTMusic()")
+print("------------------")
+
+print("Calling copyPlayliststoYTMusic()")
 copyPlayliststoYTMusic()
+print("Finished copyPlayliststoYTMusic()")
+print("------------------")

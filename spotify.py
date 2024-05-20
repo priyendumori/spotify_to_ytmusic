@@ -2,9 +2,9 @@ import spotipy
 import spotipy.util as util
 import json
 
-clientId = "<client-id-of-registered-app>"
-clientSecret = "<client-secret-of-registered-app>"
-redirectUri = "<redirectUri-of-registered-app>"
+clientId = "2c4f1d0677624c3facd946ef442c693b"
+clientSecret = "9f96b42ed03245f39788109628bfd4f2"
+redirectUri = "http://example.com"
 
 def writeLikedSongsToFile():
     scope = 'user-library-read'
@@ -150,7 +150,7 @@ def writeUserPlaylistsToFile():
         if (len(results['items']) > 0):
             for idx, item in enumerate(results['items']):
                 print(idx, item['name'], " - ", item['id'], " - ", item['owner']['display_name'], " - ", item['description'])
-                add_to_list = input("Would you like to add this playlist to the list? (yes/no): ")
+                add_to_list = input("Would you like to add this playlist to the list? (y/n): ")
                 if add_to_list.lower() == "y":
                     playlist = {
                         "name": item['name'],
@@ -221,4 +221,22 @@ def writeUserPlayListsWithTrackInfoToFile():
     with open("spotify_playlistsWithTracks.json", "w") as outfile:
         outfile.write(json.dumps(playlistsWithTracks, indent=4))
 
+def writePlayLists():
+    writeUserPlaylistsToFile()
+    writeUserPlayListsWithTrackInfoToFile()
+
+print("Going through LikedSongs")
 writeLikedSongsToFile()
+print("Completed")
+
+print("Going through LikedAlbums")
+writeLikedAlbumsToFile()
+print("Completed")
+
+print("Going through LikedArtists")
+writeLikedArtistsToFile()
+print("Completed")
+
+print("Going through PlayLists")
+writePlayLists()
+print("Completed")
