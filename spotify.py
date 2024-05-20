@@ -2,9 +2,9 @@ import spotipy
 import spotipy.util as util
 import json
 
-clientId = "2c4f1d0677624c3facd946ef442c693b"
-clientSecret = "9f96b42ed03245f39788109628bfd4f2"
-redirectUri = "http://example.com"
+clientId = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+clientSecret = "xxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+redirectUri = "xxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 
 def writeLikedSongsToFile():
     scope = 'user-library-read'
